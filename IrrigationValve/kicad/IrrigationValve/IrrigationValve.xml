@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>D:/git/arduino-irrigation-valve/IrrigationValve/kicad/IrrigationValve/IrrigationValve.sch</source>
+    <date>11.10.2015. 17:15:05</date>
+    <tool>Eeschema (2015-08-05 BZR 6055, Git fa29c62)-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Irrigation Valve</title>
+        <company/>
+        <rev/>
+        <date/>
+        <source>IrrigationValve.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Q1">
+      <value>TIP120</value>
+      <footprint>Power_Integrations:TO-220</footprint>
+      <libsource lib="transistors" part="TIP120"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D456D0</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>2.2K</value>
+      <footprint>Resistors_ThroughHole:Resistor_Vertical_RM5mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D45729</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>1N4004</value>
+      <footprint>Diodes_ThroughHole:Diode_DO-201AD_Horizontal_RM15</footprint>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D45780</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>arduino_nano</value>
+      <footprint>lib:arduino_nano</footprint>
+      <libsource lib="arduino" part="arduino_nano"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D46E8E</tstamp>
+    </comp>
+    <comp ref="CON1">
+      <value>BARREL_JACK</value>
+      <footprint>Connect:BARREL_JACK</footprint>
+      <libsource lib="conn" part="BARREL_JACK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D47E87</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>DCONN_2</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="dconn" part="DCONN_2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D488CE</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>PHOTORESISTOR</value>
+      <footprint>Resistors_ThroughHole:Resistor_Vertical_RM5mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D5A9D9</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>470</value>
+      <footprint>Resistors_ThroughHole:Resistor_Vertical_RM5mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55D5AD14</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>POT</value>
+      <footprint>Potentiometers:Potentiometer_Alps-RK16-single</footprint>
+      <libsource lib="device" part="POT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55E93CB9</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="POT">
+      <description>Potentionmetre</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="BARREL_JACK">
+      <description>DC Barrel Jack</description>
+      <fields>
+        <field name="Reference">CON</field>
+        <field name="Value">BARREL_JACK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="TIP120">
+      <aliases>
+        <alias>TIP121</alias>
+        <alias>TIP122</alias>
+      </aliases>
+      <description>5A Ic, 60V Vce, Silicon Darlington Power Transistor NPN, TO-220</description>
+      <docs>http://www.fairchildsemi.com/ds/TI/TIP120.pdf</docs>
+      <footprints>
+        <fp>TO-220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">TIP120</field>
+        <field name="Footprint">TO-220</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dconn" part="DCONN_2">
+      <description>Symbole general de connecteur</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">DCONN_2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="arduino" part="arduino_nano">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">arduino_nano</field>
+        <field name="Footprint">DIL20</field>
+      </fields>
+      <pins>
+        <pin num="5V" name="5V" type="output"/>
+        <pin num="3V3" name="3V3" type="input"/>
+        <pin num="A0" name="A0" type="input"/>
+        <pin num="A1" name="A1" type="input"/>
+        <pin num="A2" name="A2" type="input"/>
+        <pin num="A3" name="A3" type="input"/>
+        <pin num="A4" name="A4" type="input"/>
+        <pin num="A5" name="A5" type="input"/>
+        <pin num="A6" name="A6" type="input"/>
+        <pin num="A7" name="A7" type="output"/>
+        <pin num="D2" name="D2" type="BiDi"/>
+        <pin num="D3" name="#D3" type="BiDi"/>
+        <pin num="D4" name="D4" type="BiDi"/>
+        <pin num="D5" name="#D5" type="BiDi"/>
+        <pin num="D6" name="#D6" type="BiDi"/>
+        <pin num="D7" name="D7" type="BiDi"/>
+        <pin num="D8" name="D8" type="BiDi"/>
+        <pin num="D9" name="#D9" type="BiDi"/>
+        <pin num="D10" name="#D10" type="BiDi"/>
+        <pin num="D11" name="#D11" type="input"/>
+        <pin num="D12" name="D12" type="BiDi"/>
+        <pin num="D13" name="D13" type="input"/>
+        <pin num="GND" name="GND" type="BiDi"/>
+        <pin num="GND1" name="GND1" type="BiDi"/>
+        <pin num="REF" name="REF" type="input"/>
+        <pin num="RST" name="RST" type="input"/>
+        <pin num="RST1" name="RST1" type="BiDi"/>
+        <pin num="RX0" name="RX0" type="BiDi"/>
+        <pin num="TX1" name="TX1" type="BiDi"/>
+        <pin num="VIN" name="VIN" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>D:\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>D:\KiCad\share\kicad\library\transistors.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>D:\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+    <library logical="arduino">
+      <uri>D:\git\arduino-irrigation-valve\IrrigationValve\kicad\IrrigationValve\lib\arduino.lib</uri>
+    </library>
+    <library logical="dconn">
+      <uri>D:\git\arduino-irrigation-valve\IrrigationValve\kicad\IrrigationValve\lib\dconn.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(U1-PadREF)">
+      <node ref="U1" pin="REF"/>
+    </net>
+    <net code="2" name="Net-(U1-PadD4)">
+      <node ref="U1" pin="D4"/>
+    </net>
+    <net code="3" name="Net-(U1-PadD5)">
+      <node ref="U1" pin="D5"/>
+    </net>
+    <net code="4" name="Net-(U1-PadD6)">
+      <node ref="U1" pin="D6"/>
+    </net>
+    <net code="5" name="Net-(U1-PadD7)">
+      <node ref="U1" pin="D7"/>
+    </net>
+    <net code="6" name="Net-(U1-PadD8)">
+      <node ref="U1" pin="D8"/>
+    </net>
+    <net code="7" name="Net-(U1-PadD9)">
+      <node ref="U1" pin="D9"/>
+    </net>
+    <net code="8" name="Net-(U1-PadD10)">
+      <node ref="U1" pin="D10"/>
+    </net>
+    <net code="9" name="Net-(U1-PadD11)">
+      <node ref="U1" pin="D11"/>
+    </net>
+    <net code="10" name="Net-(U1-PadRST)">
+      <node ref="U1" pin="RST"/>
+    </net>
+    <net code="11" name="Net-(U1-PadA7)">
+      <node ref="U1" pin="A7"/>
+    </net>
+    <net code="12" name="Net-(U1-PadA6)">
+      <node ref="U1" pin="A6"/>
+    </net>
+    <net code="13" name="Net-(U1-PadA5)">
+      <node ref="U1" pin="A5"/>
+    </net>
+    <net code="14" name="Net-(U1-PadA4)">
+      <node ref="U1" pin="A4"/>
+    </net>
+    <net code="15" name="Net-(U1-PadA3)">
+      <node ref="U1" pin="A3"/>
+    </net>
+    <net code="16" name="Net-(U1-PadA2)">
+      <node ref="U1" pin="A2"/>
+    </net>
+    <net code="17" name="Net-(U1-PadD3)">
+      <node ref="U1" pin="D3"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad3V3)">
+      <node ref="U1" pin="3V3"/>
+    </net>
+    <net code="19" name="Net-(U1-PadD13)">
+      <node ref="U1" pin="D13"/>
+    </net>
+    <net code="20" name="Net-(CON1-Pad3)">
+      <node ref="CON1" pin="3"/>
+    </net>
+    <net code="21" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="R3" pin="1"/>
+      <node ref="U1" pin="A0"/>
+    </net>
+    <net code="22" name="GND">
+      <node ref="R3" pin="2"/>
+      <node ref="U1" pin="GND"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="CON1" pin="2"/>
+      <node ref="RV1" pin="3"/>
+    </net>
+    <net code="23" name="+5V">
+      <node ref="R2" pin="1"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="U1" pin="5V"/>
+    </net>
+    <net code="24" name="Net-(RV1-Pad2)">
+      <node ref="RV1" pin="2"/>
+      <node ref="U1" pin="A1"/>
+    </net>
+    <net code="25" name="Net-(U1-PadTX1)">
+      <node ref="U1" pin="TX1"/>
+    </net>
+    <net code="26" name="Net-(U1-PadRX0)">
+      <node ref="U1" pin="RX0"/>
+    </net>
+    <net code="27" name="Net-(U1-PadD2)">
+      <node ref="U1" pin="D2"/>
+    </net>
+    <net code="28" name="Net-(R1-Pad2)">
+      <node ref="U1" pin="D12"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="29" name="Net-(C1-Pad2)">
+      <node ref="Q1" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="30" name="+12V">
+      <node ref="U1" pin="VIN"/>
+      <node ref="CON1" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="31" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="32" name="Net-(U1-PadRST1)">
+      <node ref="U1" pin="RST1"/>
+    </net>
+    <net code="33" name="Net-(U1-PadGND1)">
+      <node ref="U1" pin="GND1"/>
+    </net>
+  </nets>
+</export>
